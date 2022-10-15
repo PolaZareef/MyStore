@@ -1,13 +1,13 @@
-<form #form="ngForm">
+<form #form="ngForm" (ngSubmit)="onSubmit()">
     <label for="name">Full name</label><br>
-    <input type="text" name="name" required minlength="3" maxlength="32" placeholder="minimum 3 charater..." [(ngModel)]="checkOrder.fullname">
+    <input type="text" name="name" required minlength="3" maxlength="32" placeholder="minimum 3 charater..." [(ngModel)]="name">
     <br>
     <label for="address">Address</label><br>
-    <input name="address" required minlength="6" placeholder="minimum 6 character..." [(ngModel)]="address">
+    <input type="text" name="address" required minlength="6" placeholder="minimum 6 character..." [(ngModel)]="address">
     <br>
     <label for="credit">Credit Card Number</label><br>
-    <input name="credit" required minlength="16" placeholder="minimum 16 digit..." [(ngModel)]="cardNumber">
+    <input type="number" name="cardNumber" required  pattern='.{16}' placeholder="minimum 16 digit..." [(ngModel)]="cardNumber">
     <br>
     <p>we will never share your payment details with anyone else</p>
-    <input type="submit" routerLink="/checkorder" [disabled]="form.invalid" value="submit" class="btn btn-primary" >
+    <input type="submit"  [disabled]="form.invalid" value="submit" class="btn btn-primary" >
 </form>

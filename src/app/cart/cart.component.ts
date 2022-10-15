@@ -14,26 +14,40 @@ export class CartComponent implements OnInit {
   total:number=0;
   fullname:string='';
   quantity:number[]=[0,1,2,3,4,5,6,7,8,9,10];
+  productIndex:number=0
 
   constructor(private shoppingcartService:CartServiceService,private checkOrderSer:ChechOrderService, private router:Router) { }
 
   ngOnInit(): void {
     this.shoppingCartProducts=this.shoppingcartService.cartProducts;
-    for(let i=0;i<this.shoppingCartProducts.length;i++)
-    {
-      this.total+=(this.shoppingCartProducts[i].price*this.shoppingCartProducts[i].amount);
-    }
-    this.checkOrderSer.totalPrice=this.total;    
+    this.calculateTotalPrice();    
   }
   onChange(product:Products){
-    console.log(this.total);7
-    //this.total=0;
       for(let i=0;i<this.shoppingCartProducts.length;i++)
       {
-        this.total+=(this.shoppingCartProducts[i].price*this.shoppingCartProducts[i].amount);
+        if(this.shoppingCartProducts[i].id===product.id && this.shoppingCartProducts[i].amount===0)
+        {
+          this.productIndex=this.shoppingCartProducts.findIndex(p=>p.id===this.shoppingCartProducts[i].id);
+          console.log(this.productIndex);
+          this.shoppingCartProducts.splice(this.productIndex,1);
+        }
       }
+      this.calculateTotalPrice();
+    }
+
+    checkorderSuccess(name : string){
+      this.checkOrderSer.fullname=name;
+      this.router.navigate(["checkorder"]);
+    }
+
+    calculateTotalPrice(){
+      this.total=0;
+      for(let i=0;i<this.shoppingCartProducts.length;i++)
+      {
+        this.total+=Number(this.shoppingCartProducts[i].price*this.shoppingCartProducts[i].amount);
+      }
+      this.total=Number(this.total.toFixed(2));
       this.checkOrderSer.totalPrice=this.total;
-      console.log(this.total);
     }
   
 }

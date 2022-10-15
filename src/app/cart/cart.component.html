@@ -12,13 +12,13 @@
                     <label for="age">
                         Amount:    
                         <input type="number" name="amount" id="amount"
-                            min="0" max="10" step="1" value={{product.amount}} (change)="onChange(product)">
+                            min="0" max="10" step="1" value={{product.amount}} [(ngModel)]="product.amount" (ngModelChange)="onChange(product)">
                     </label>
                 </div>
             </div>
         </div>
         <div class="col-sm-6" *ngIf="total!==0">
-            <app-confirmation></app-confirmation>
+            <app-confirmation (checkOrderSuccess)="checkorderSuccess($event)"></app-confirmation>
         </div>
         <h1 class="sech1" *ngIf="total!==0">Total: ${{total}}</h1>
     </div>
