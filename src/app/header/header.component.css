@@ -1,0 +1,22 @@
+.header {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .aa{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: normal;
+  }
+  .aa:hover{
+    cursor: pointer;
+  }

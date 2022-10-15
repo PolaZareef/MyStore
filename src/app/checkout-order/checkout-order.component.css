@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+    margin-top: 100px;
+}
+h1{
+    color: rgb(1, 211, 211);
+    font-weight: bold;
+    font-size: 70px;
+}
+p{
+    font-size: 30px;
+}
+button{
+    height: 50px;
+    width: 300px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 20px;
+}
