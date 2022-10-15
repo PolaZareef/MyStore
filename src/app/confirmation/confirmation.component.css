@@ -1,0 +1,13 @@
+label{
+    font-size: 30px;
+}
+input{
+    margin-bottom: 10px;
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+}
+.btn{
+    font-weight: bold;
+    font-size: 20px;
+}

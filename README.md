@@ -3,25 +3,28 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
 ## Development server
+Run `npm install` to generate angular CLI project with all dependencies.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate service|module`.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Description of this Project
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+MyStore Project have a product List component it show all products with some details as(image,price,description).
 
-## Further help
+User can Select more than one product with quantity that he choose and add all of the to his Cart.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Cart component show all of products with details and quantity of each product that user Select, and compute the Total Price of All order.
+
+Confirmation Component show a form for user to take from user his name and address and CardNumber with some validation.
+
+checkOrder component show to user the success of submition of all order.
+
+

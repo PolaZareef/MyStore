@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 *ngIf="total===0" class="h11">Cart is Empty...!</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row" *ngFor="let product of shoppingCartProducts">
+                <div class="col-sm-6">
+                    <img src={{product.url}} title="image title">
+                </div>
+                <div class="col-sm-6 data">
+                    <h1 class="h1">{{product.name}}</h1>
+                    <p>${{product.price}}</p>
+                    <label for="age">
+                        Amount:    
+                        <input type="number" name="amount" id="amount"
+                            min="0" max="10" step="1" value={{product.amount}} (change)="onChange(product)">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6" *ngIf="total!==0">
+            <app-confirmation></app-confirmation>
+        </div>
+        <h1 class="sech1" *ngIf="total!==0">Total: ${{total}}</h1>
+    </div>
+</div>
