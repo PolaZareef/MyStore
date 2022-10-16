@@ -12,6 +12,6 @@ export class Products{
         this.price=0;
         this.url='';
         this.description='';
-        this.amount=1;
+        this.amount=0;
     }
 }

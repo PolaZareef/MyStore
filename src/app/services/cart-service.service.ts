@@ -9,6 +9,11 @@ export class CartServiceService {
   constructor() {  }
 
   CartProducts(product:Products){
+    if(product.amount===undefined)
+    {
+      alert("Please Select amount for "+product.name+" Product!");
+      return;
+    }
     for(let i=0;i<this.cartProducts.length;i++)
     {
       if(this.cartProducts[i].id===product.id)
