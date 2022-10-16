@@ -6,9 +6,21 @@ import { Products } from '../models/products';
 })
 export class CartServiceService {
   cartProducts:Products[]=[];
-  constructor() { }
+  constructor() {  }
 
   CartProducts(product:Products){
+    for(let i=0;i<this.cartProducts.length;i++)
+    {
+      if(this.cartProducts[i].id===product.id)
+      {
+        alert("this Item already exist in card...!");
+        return;
+      }
+      else{
+        continue;
+      }
+    }
     this.cartProducts.push(product);
+    alert("Product Added to Cart...");
   }
 }

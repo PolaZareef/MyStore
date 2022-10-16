@@ -1,13 +1,22 @@
 <form #form="ngForm" (ngSubmit)="onSubmit()">
     <label for="name">Full name</label><br>
-    <input type="text" name="name" required minlength="3" maxlength="32" placeholder="minimum 3 charater..." [(ngModel)]="name">
+    <input type="text" #fullname="ngModel" name="name" required minlength="3" maxlength="32" placeholder="minimum 3 charater..." [(ngModel)]="name">
     <br>
+    <div *ngIf="fullname.invalid && fullname.dirty" class="error">
+        Please Enter a Valid Name with at Least 3 Character
+    </div><br>
     <label for="address">Address</label><br>
-    <input type="text" name="address" required minlength="6" placeholder="minimum 6 character..." [(ngModel)]="address">
+    <input type="text" #fulladdress="ngModel" name="address" required minlength="6" placeholder="minimum 6 character..." [(ngModel)]="address">
     <br>
+    <div *ngIf="fulladdress.invalid && fulladdress.dirty" class="error">
+        Please Enter a Valid address with at Least 6 Character
+    </div><br>
     <label for="credit">Credit Card Number</label><br>
-    <input type="number" name="cardNumber" required  pattern='.{16}' placeholder="minimum 16 digit..." [(ngModel)]="cardNumber">
+    <input type="number" #fullcardnumber="ngModel" name="cardNumber" required  pattern='.{16}' placeholder="minimum 16 digit..." [(ngModel)]="cardNumber">
     <br>
+    <div *ngIf="fullcardnumber.invalid && fullcardnumber.dirty" class="error">
+        Please Enter a Valid Card Number with only 16 Digit 
+    </div><br>
     <p>we will never share your payment details with anyone else</p>
     <input type="submit"  [disabled]="form.invalid" value="submit" class="btn btn-primary" >
 </form>

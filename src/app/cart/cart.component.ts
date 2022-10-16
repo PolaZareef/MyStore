@@ -28,7 +28,7 @@ export class CartComponent implements OnInit {
         if(this.shoppingCartProducts[i].id===product.id && this.shoppingCartProducts[i].amount===0)
         {
           this.productIndex=this.shoppingCartProducts.findIndex(p=>p.id===this.shoppingCartProducts[i].id);
-          console.log(this.productIndex);
+          alert("the "+this.shoppingCartProducts[i].name+" Item will be Removed from Cart List!");
           this.shoppingCartProducts.splice(this.productIndex,1);
         }
       }
