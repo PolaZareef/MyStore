@@ -1,4 +1,4 @@
-<form #form="ngForm" (ngSubmit)="onSubmit()">
+<form #form="ngForm" (ngSubmit)="onSubmit()" class="form">
     <label for="name">Full name</label><br>
     <input type="text" #fullname="ngModel" name="name" required minlength="3" maxlength="32" placeholder="minimum 3 charater..." [(ngModel)]="name">
     <br>

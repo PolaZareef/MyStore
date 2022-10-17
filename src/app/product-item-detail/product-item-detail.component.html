@@ -4,7 +4,7 @@
     </div>
     <div class="col-sm-6 data">
         <h1>{{productitem.name}}</h1>
-        <p>${{productitem.price}}</p>
+        <p class="p1">${{productitem.price}}</p>
         <p>{{productitem.description}}</p>
         <select name="products" id="products" title="products" [(ngModel)]="productitem.amount" [value]="productitem.amount">
             <option *ngFor="let x of quantity" value={{x}}>{{x}}</option>

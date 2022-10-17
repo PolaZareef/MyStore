@@ -7,6 +7,10 @@ img {
     margin-top: 100px;
     margin-left: 600px;
   }
+  .row{
+    max-width: 100%;
+
+  }
 .data{
     margin-top: 200px;
   }
@@ -37,7 +41,16 @@ img {
   }
   @media screen and (max-width: 600px) {
       img{
-        margin-left: 350px;
+        margin-left: 80px;
+        margin-top: 0px;
+        
+    }
+    .data{
+      margin-top: 50px;
+      text-align: center;
+    }
+    .p1{
+      color: blue;
     }
     
   }

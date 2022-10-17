@@ -2,13 +2,13 @@
     <h1 *ngIf="total===0" class="h11">Cart is Empty...!</h1>
     <div class="row">
         <div class="col-sm-6">
-            <div class="row" *ngFor="let product of shoppingCartProducts">
+            <div class="row fircol" *ngFor="let product of shoppingCartProducts">
                 <div class="col-sm-6">
                     <img src={{product.url}} title="image title">
                 </div>
                 <div class="col-sm-6 data">
                     <h1 class="h1">{{product.name}}</h1>
-                    <p>${{product.price}}</p>
+                    <p class="p">${{product.price}}</p>
                     <label for="age">
                         Amount:    
                         <input type="number" name="amount" id="amount"
@@ -16,10 +16,10 @@
                     </label>
                 </div>
             </div>
+            <h1 class="sech1" *ngIf="total!==0">Total: ${{total}}</h1>
         </div>
         <div class="col-sm-6" *ngIf="total!==0">
             <app-confirmation (checkOrderSuccess)="checkorderSuccess($event)"></app-confirmation>
         </div>
-        <h1 class="sech1" *ngIf="total!==0">Total: ${{total}}</h1>
     </div>
 </div>

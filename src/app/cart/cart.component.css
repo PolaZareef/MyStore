@@ -12,8 +12,12 @@ img {
   p{
     font-size: 30px;
   }
+  .p{
+    color: blue;
+  }
   .sech1{
     font-weight: bold;
+    color: blue;
   }
   .h11{
     text-align: center;
@@ -21,4 +25,16 @@ img {
     font-size: 80px;
     font-weight: bold;
   }
-  
+  @media only screen and (max-width: 600px) {
+    .fircol{
+      margin-left: 150px;
+      margin-bottom: 40px;
+    } 
+    img{
+      margin-bottom: 0px;
+    }
+    .data{
+      margin-top: 0px;
+    }
+    .sech1{text-align: center;}
+  }
