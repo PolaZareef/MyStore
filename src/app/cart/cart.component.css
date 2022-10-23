@@ -27,7 +27,7 @@ img {
   }
   @media only screen and (max-width: 600px) {
     .fircol{
-      margin-left: 150px;
+      margin-left: 120px;
       margin-bottom: 40px;
     } 
     img{
@@ -38,3 +38,4 @@ img {
     }
     .sech1{text-align: center;}
   }
+

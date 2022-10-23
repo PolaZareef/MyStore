@@ -29,3 +29,8 @@ p{
         font-weight: bold;
     }
 }
+@media screen and (min-width: 412px ) and (max-width:914px) {
+    input{
+        width: 390px;
+    }
+  }
