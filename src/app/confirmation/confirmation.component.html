@@ -12,7 +12,7 @@
         Please Enter a Valid address with at Least 6 Character
     </div><br>
     <label for="credit">Credit Card Number</label><br>
-    <input type="number" #fullcardnumber="ngModel" name="cardNumber" required  pattern='.{16}' placeholder="minimum 16 digit..." [(ngModel)]="cardNumber">
+    <input type="number" #fullcardnumber="ngModel" name="cardNumber" required  pattern='.{16}' maxlength="16" placeholder="minimum 16 digit..." [(ngModel)]="cardNumber" onKeyPress="if(this.value.length==16) return false;">
     <br>
     <div *ngIf="fullcardnumber.invalid && fullcardnumber.dirty" class="error">
         Please Enter a Valid Card Number with only 16 Digit 

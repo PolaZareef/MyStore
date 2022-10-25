@@ -34,3 +34,8 @@ p{
         width: 390px;
     }
   }
+  @media(min-width:300px){
+    input{
+        width: 100%;
+    }
+}

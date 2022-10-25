@@ -41,12 +41,13 @@ img {
   }
   @media screen and (max-width: 600px) {
       img{
-        margin-left: 80px;
+        padding-left: 60px;
         margin-top: 0px;
         
     }
     .data{
       margin-top: 50px;
+      padding-left: 50px;
       text-align: center;
     }
     .p1{
@@ -56,9 +57,14 @@ img {
   }
   @media screen and (min-width: 412px ) and (max-width:914px) {
     img{
-      margin-left: 45px;      
+      margin-left: 25px;
   }
   }
+  @media(min-width:300px) and (max-width:740px){
+    img{
+      margin-left: 0px;
+    }
+}
  
   
   
