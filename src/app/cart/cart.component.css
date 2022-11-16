@@ -1,4 +1,4 @@
-img {
+  img {
     width: 150px;
     border-radius: 10px;
     margin-bottom: 50px;
@@ -8,24 +8,31 @@ img {
   }
   .h1{
     font-size: 40px;
+    color: white;
   }
   p{
     font-size: 30px;
   }
   .p{
-    color: blue;
+    color: #03e9f4;
   }
   .sech1{
     font-weight: bold;
-    color: blue;
+    color: #03e9f4;
+    text-align: center;
   }
   .h11{
     text-align: center;
     margin-top: 100px;
+    color: white;
     font-size: 80px;
     font-weight: bold;
     animation-duration: 1s;
   animation-name: slidein;
+  }
+  .lab{
+    color: white;
+    font-weight: bold;
   }
   @keyframes slidein {
     from {
@@ -43,8 +50,21 @@ img {
       margin-left: 120px;
       margin-bottom: 40px;
     } 
+    .h1{
+      font-size: 40px;
+      color: white;
+      margin-left: 15px;
+    }
+    .p{
+      color: #03e9f4;
+      margin-left: 15px;
+    }
+    .lab{
+      margin-left: 15px;
+    }
     img{
       margin-bottom: 0px;
+      margin-left: 15px;
     }
     .data{
       margin-top: 0px;

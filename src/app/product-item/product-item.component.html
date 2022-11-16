@@ -1,6 +1,6 @@
 <div class="product-container">
     <a routerLink="/productDetail">
-    <img src={{productItem.url}} title="image title" class="product-image" (click)="productDetail(productItem)" >
+    <img src={{productItem.url}} loading="lazy" title="image title" class="product-image" (click)="productDetail(productItem)" >
     </a>
     <p class="P">{{productItem.name}}</p>
     <p class="p1">${{productItem.price}}</p>

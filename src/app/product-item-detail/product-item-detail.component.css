@@ -16,9 +16,14 @@ img {
   }
   h1{
     font-weight: bold;
+    color: white;
   }
   p{
     font-size: 30px;
+    color: white;
+  }
+  .p1{
+    color: #04b3bd;
   }
   select{
     width: 110px;
@@ -28,16 +33,27 @@ img {
     margin-top: 10px;
     height: 50px;
     margin-bottom: 20px;
+    font-weight: bold;
+    background-color: #04b3bd;
+  }
+  button:hover{
+    color: black;
+    background-color: #12dee9;
   }
   a{
     font-size: 20px;
     text-decoration: none;
     font-weight: bold;
+    color: #04b3bd;;
   }
   span{
+    color: #04b3bd;;
     margin-bottom: 6px;
     font-weight: bold;
     font-size: 30px;
+  }
+  a:hover,span:hover{
+    color: #12dee9;
   }
   @media screen and (max-width: 600px) {
       img{
@@ -50,14 +66,11 @@ img {
       padding-left: 50px;
       text-align: center;
     }
-    .p1{
-      color: blue;
-    }
     
   }
   @media screen and (min-width: 412px ) and (max-width:914px) {
     img{
-      margin-left: 25px;
+      margin-left: 50%;
   }
   }
   @media(min-width:300px) and (max-width:740px){

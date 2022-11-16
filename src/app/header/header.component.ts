@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { LoginService } from '../services/login.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,public LogInService:LoginService) { }
 
   ngOnInit(): void {
+  }
+
+  goToStore(){
+      this.router.navigate(['products']);
+  }
+  goToCart(){
+      this.router.navigate(['cart']);
   }
 
 }

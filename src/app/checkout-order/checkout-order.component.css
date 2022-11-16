@@ -3,12 +3,13 @@ div{
     margin-top: 100px;
 }
 h1{
-    color: rgb(1, 211, 211);
+    color: #03e9f4;
     font-weight: bold;
     font-size: 70px;
 }
 p{
     font-size: 30px;
+    color: white;
 }
 button{
     height: 50px;
@@ -16,4 +17,9 @@ button{
     font-weight: bold;
     font-size: large;
     margin-top: 20px;
+    background-color: #04b3bd;
+}
+button:hover{
+    color: black;
+    background-color: #03e9f4;
 }

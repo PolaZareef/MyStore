@@ -1,5 +1,5 @@
 <div class="header">
-    <a routerLink="/">MyStore</a>
+    <a>MyStore</a>
     <br>
-    <a><b routerLink="/" class="aa">Product List</b> | <b routerLink="/cart" class="aa">Cart</b></a>
+    <a *ngIf="LogInService.isLogin"><b  (click)="goToStore()" class="aa">Product List</b> | <b (click)="goToCart()" class="aa">Cart</b></a>
 </div>

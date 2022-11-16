@@ -1,5 +1,6 @@
 label{
     font-size: 30px;
+    color: white;
 }
 input{
     margin-bottom: 10px;
@@ -10,6 +11,11 @@ input{
 .btn{
     font-weight: bold;
     font-size: 20px;
+    background-color:#04b3bd;
+}
+.btn:hover{
+    color: black;
+    background-color: #03e9f4;
 }
 .error{
     color: red;
@@ -17,6 +23,7 @@ input{
 p{
     font-size: 20px;
     font-weight: bold;
+    color: white;
 }
 @media only screen and (max-width: 600px) {
     .form{
