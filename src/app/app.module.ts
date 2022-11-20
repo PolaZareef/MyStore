@@ -32,7 +32,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

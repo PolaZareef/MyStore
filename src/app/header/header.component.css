@@ -3,21 +3,25 @@
     background: #04b3bd;
     color: #fff;
     padding: 12px;
+    position: relative;
   }
-  
   a {
     color: #ffffff;
     text-decoration: none;
     font-size: 40px;
     font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
   }
   .aa{
     color: #ffffff;
     text-decoration: none;
     font-size: 30px;
     font-weight: normal;
+    text-shadow: 2px 2px 4px #000000;
   }
   .aa:hover{
     cursor: pointer;
+    transition: 0.5s;
+    text-shadow: 2px 2px 4px #949494;
   }
   

@@ -10,7 +10,7 @@
                     <h1 class="h1">{{product.name}}</h1>
                     <p class="p">${{product.price}}</p>
                     <label for="age" class="lab">
-                        Amount:    
+                        Amount:  
                         <input type="number" name="amount" id="amount"
                             min="0" max="10" step="1" value={{product.amount}} [(ngModel)]="product.amount" (ngModelChange)="onChange(product)">
                     </label>
