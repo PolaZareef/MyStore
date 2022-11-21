@@ -3,4 +3,5 @@
     <br>
     <a *ngIf="LogInService.isLogin"><b  (click)="goToStore()" class="aa"><i class="fa fa-home"></i> Product List</b> | <b (click)="goToCart()" class="aa">Cart<i class='fa fa-shopping-cart'></i>
     </b></a>
+    <a class="login" *ngIf="!LogInService.isLogin" (click)="logIn()"><i class="fa fa-user"></i>Log In</a>
 </div>

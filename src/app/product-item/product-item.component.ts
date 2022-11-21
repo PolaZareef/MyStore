@@ -3,6 +3,7 @@ import { Products } from '../models/products';
 import { ProductsService } from '../services/products.service';
 import { ProductDetailService } from '../services/product-detail.service';
 import { CartServiceService } from '../services/cart-service.service';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-product-item',
@@ -15,7 +16,7 @@ export class ProductItemComponent implements OnInit {
   @Input()
   productItem:Products;
 
-  constructor(private productService:ProductsService,private productDetailservice:ProductDetailService,private cartService:CartServiceService) { 
+  constructor(private productService:ProductsService,private productDetailservice:ProductDetailService,private cartService:CartServiceService,private logInSer:LoginService) { 
     this.productItem={
       id:1,
       name:'',
@@ -33,6 +34,12 @@ export class ProductItemComponent implements OnInit {
     this.productDetailservice.ProductsDetail(product);
   }
   AddProducttoCart(product:Products){
-    this.cartService.CartProducts(product);
+    if(this.logInSer.isLogin===false)
+    {
+      alert("Please LogIn...!");
+    }
+    else{
+      this.cartService.CartProducts(product);
+    }
   }
 }

@@ -15,10 +15,13 @@ export class HeaderComponent implements OnInit {
   }
 
   goToStore(){
-      this.router.navigate(['products']);
+      this.router.navigate(['']);
   }
   goToCart(){
       this.router.navigate(['cart']);
+  }
+  logIn(){
+    this.router.navigate(['login']);
   }
 
 }
