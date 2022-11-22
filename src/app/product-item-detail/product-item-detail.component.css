@@ -1,18 +1,18 @@
 img {
     border-radius: 10px;
-    width: 320px;
+    width: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    margin-left: 600px;
+    margin-top: 40px;
+    margin-left: 300px;
   }
   .row{
     max-width: 100%;
 
   }
 .data{
-    margin-top: 200px;
+    margin-top: 80px;
   }
   h1{
     font-weight: bold;
@@ -57,7 +57,7 @@ img {
   }
   @media screen and (max-width: 600px) {
       img{
-        padding-left: 60px;
+        padding-left: 130px;
         margin-top: 0px;
         
     }
@@ -70,7 +70,7 @@ img {
   }
   @media screen and (min-width: 412px ) and (max-width:914px) {
     img{
-      margin-left: 50%;
+      margin-left: 60%;
   }
   }
   @media(min-width:300px) and (max-width:740px){

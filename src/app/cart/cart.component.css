@@ -1,17 +1,17 @@
   img {
     width: 150px;
     border-radius: 10px;
-    margin-bottom: 50px;
   }
-  .data{
+  
+  .fircol{
     margin-top: 50px;
   }
   .h1{
-    font-size: 40px;
+    font-size: 30px;
     color: white;
   }
   p{
-    font-size: 30px;
+    font-size: 20px;
   }
   .p{
     color: #03e9f4;
@@ -20,12 +20,13 @@
     font-weight: bold;
     color: #03e9f4;
     text-align: center;
+    margin-top: 30px;
   }
   .h11{
     text-align: center;
     margin-top: 100px;
     color: white;
-    font-size: 80px;
+    font-size: 50px;
     font-weight: bold;
     animation-duration: 1s;
   animation-name: slidein;

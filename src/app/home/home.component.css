@@ -1,0 +1,15 @@
+.bg-image{
+    background-image: url('https://wallpaperaccess.com/full/2593068.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+}
+@media only screen and (max-width: 600px) {
+    .bg-image{
+        background-size: cover;
+        object-fit: cover;
+        transform: scale(1);
+    }
+  }

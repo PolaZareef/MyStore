@@ -1,6 +1,6 @@
 .product-image {      
     list-style-type: none;
-    width: 290px;
+    width: 260px;
     padding: 20px;
     margin: 6px 6px;        
     border: 1px solid #04b3bd;
@@ -23,9 +23,10 @@
   .select-input {
     width: 108px; 
     margin-bottom: 8px;
+    height: 80%;
   }
   .P{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: white;
   }
@@ -35,6 +36,7 @@
   .btn{
     background-color: #04b3bd;
     font-weight: bold;
+    font-size: 15px;
   }
   .btn:hover{
     background-color: #03e9f4;

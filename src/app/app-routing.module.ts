@@ -5,9 +5,12 @@ import { ProductItemDetailComponent } from './product-item-detail/product-item-d
 import { CartComponent } from './cart/cart.component';
 import { CheckoutOrderComponent } from './checkout-order/checkout-order.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [
   {path:'',component:ProductListComponent},
+  {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'productDetail',component:ProductItemDetailComponent},
   {path:'cart',component:CartComponent},
