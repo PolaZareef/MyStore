@@ -1,4 +1,4 @@
-<form #form="ngForm" class="login-box" (ngSubmit)="signIn()">
+<form #form="ngForm" class="login-box" >
     <h1>Create Account</h1>
         <div class="user-box">
             <input type="text" #firstname="ngModel" title="firstName" name="firstName" required minlength="3" maxlength="32" [(ngModel)]="firstName">

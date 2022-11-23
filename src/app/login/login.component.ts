@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { RegisterService } from '../services/register.service';
+import { Users } from '../models/users';
 
 @Component({
   selector: 'app-login',
@@ -10,20 +12,25 @@ import { LoginService } from '../services/login.service';
 export class LoginComponent implements OnInit {
   email:string='';
   password:string='';
-  constructor(private router:Router,private logInService:LoginService) { }
+  users:Users[]=[];
+  constructor(private router:Router,private logInService:LoginService,private registerSer:RegisterService) { }
 
   ngOnInit(): void {
+    this.users=this.registerSer.users;
   }
   logIn(){
-    if(this.email==='' || this.password==='')
+    for(let i=0;i<this.users.length;i++)
     {
-      alert("Please Enter Username and Password...!");
+      if(this.email===this.users[i].email && this.password===this.users[i].password)
+      {
+        this.logInService.isLogin=true;
+        this.router.navigate(["products"]);    
+      }
+      else
+      {
+        alert("User Not Found...!");
+      }
     }
-    else{
-      this.logInService.isLogin=true;
-      this.router.navigate(["products"]);
-    }
-    
   }
   SignUp(){
     this.router.navigate(["register"]);
