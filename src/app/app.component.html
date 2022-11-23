@@ -1,2 +1,2 @@
-<app-header></app-header>
+<app-header *ngIf="!router.url.includes('home')"></app-header>
 <router-outlet class="body"></router-outlet>

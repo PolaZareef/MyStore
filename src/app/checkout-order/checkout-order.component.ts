@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChechOrderService } from '../services/check-order.service';
 
 @Component({
@@ -9,11 +10,15 @@ import { ChechOrderService } from '../services/check-order.service';
 export class CheckoutOrderComponent implements OnInit {
   name:string='';
   totalprice:number=0;
-  constructor(private checkOrder:ChechOrderService) { }
+  constructor(private checkOrder:ChechOrderService,private router:Router) { }
 
   ngOnInit(): void {
     this.name=this.checkOrder.fullname;
     this.totalprice=this.checkOrder.totalPrice;
+  }
+  goToProducts()
+  {
+    this.router.navigate(['products']);
   }
 
 }

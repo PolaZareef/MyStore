@@ -40,7 +40,7 @@ img {
     color: black;
     background-color: #12dee9;
   }
-  a{
+  .aa{
     font-size: 20px;
     text-decoration: none;
     font-weight: bold;
@@ -48,17 +48,18 @@ img {
   }
   span{
     color: #04b3bd;;
-    margin-bottom: 6px;
+    margin-bottom: 20px;
     font-weight: bold;
     font-size: 30px;
   }
-  a:hover,span:hover{
+  .aa:hover,span:hover{
     color: #12dee9;
+    cursor: pointer;
   }
   @media screen and (max-width: 600px) {
       img{
         padding-left: 130px;
-        margin-top: 0px;
+        margin-top: 30px;
         
     }
     .data{

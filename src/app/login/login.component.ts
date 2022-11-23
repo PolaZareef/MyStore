@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     }
     else{
       this.logInService.isLogin=true;
-      this.router.navigate([""]);
+      this.router.navigate(["products"]);
     }
     
   }

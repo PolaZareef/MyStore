@@ -1,15 +1,48 @@
-.bg-image{
-    background-image: url('https://wallpaperaccess.com/full/2593068.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+.bg-overlay {
+    background:url("https://media.istockphoto.com/id/1214915680/vector/online-shopping-sign-blue-neon-light-on-dark-brick-wall.jpg?s=612x612&w=0&k=20&c=ltRtSO_mRFlwJU8jdu-KCmkC0X5l5F8U7rKDc3gqc7g=");
     background-repeat: no-repeat;
-    transform: scale(1);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 617px;
+    padding-top: 250px;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
-@media only screen and (max-width: 600px) {
-    .bg-image{
-        background-size: cover;
-        object-fit: cover;
-        transform: scale(1);
+.btn{
+    width: 40%;
+    margin-left: 30%;
+    background-color: #04b3bd;
+    font-weight: bold;
+}
+.btn:hover{
+    color: black;
+    background-color: #03e9f4;
+}
+
+@keyframes slidein {
+    from {
+      padding-top: 500px;
+    }
+  
+    to {
+      padding-top: 250px;
     }
   }
+@media only screen and (max-width: 600px) {
+    .bg-overlay{
+        height: 800px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .bg-overlay{
+        height: 900px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .bg-overlay{
+        height: 950px;
+    }
+}
+
+
