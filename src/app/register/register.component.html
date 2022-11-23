@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="user-box">
-            <input type="email" #email1="ngModel" title="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="email">
+            <input type="email" #email1="ngModel" title="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [(ngModel)]="email">
             <label for="email">Email</label>
             <div *ngIf="email1.invalid && email1.dirty" class="error">
                 Email must be in this format 'characters@characters.domain'

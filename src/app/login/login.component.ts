@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   logIn(){
     for(let i=0;i<this.users.length;i++)
     {
-      if(this.email===this.users[i].email && this.password===this.users[i].password)
+      if(this.email.toLocaleLowerCase()===this.users[i].email.toLocaleLowerCase() && this.password===this.users[i].password)
       {
         this.logInService.isLogin=true;
         this.router.navigate(["products"]);   
