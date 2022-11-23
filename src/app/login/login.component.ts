@@ -24,13 +24,11 @@ export class LoginComponent implements OnInit {
       if(this.email===this.users[i].email && this.password===this.users[i].password)
       {
         this.logInService.isLogin=true;
-        this.router.navigate(["products"]);    
-      }
-      else
-      {
-        alert("User Not Found...!");
+        this.router.navigate(["products"]);   
+        return; 
       }
     }
+    alert("User Not Found...!");
   }
   SignUp(){
     this.router.navigate(["register"]);
