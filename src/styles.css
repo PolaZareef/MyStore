@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-body {  background-color:  #243b55;
+body {  
+     background-color:  #243b55;
+     background:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTA8OEZgAEgKfZJXlMwtumB7OuQzo_BR-5sMw_6BGW9ji0GEaNW");
      ; }
 
