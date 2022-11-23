@@ -6,6 +6,7 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutOrderComponent } from './checkout-order/checkout-order.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'products',component:ProductListComponent},
   {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
   {path:'productDetail',component:ProductItemDetailComponent},
   {path:'cart',component:CartComponent},
   {path:'checkorder',component:CheckoutOrderComponent}

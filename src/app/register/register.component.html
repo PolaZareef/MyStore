@@ -1,0 +1,34 @@
+<form #form="ngForm" class="login-box" (ngSubmit)="signIn()">
+    <h1>Create Account</h1>
+        <div class="user-box">
+            <input type="text" #firstname="ngModel" title="firstName" name="firstName" required minlength="3" maxlength="32" [(ngModel)]="firstName">
+            <label for="firstname">First Name</label>
+            <div *ngIf="firstname.invalid && firstname.dirty" class="error">
+                Please Enter a Valid FirstName with at Least 3 Character
+            </div>
+        </div>
+        <div class="user-box">
+            <input type="text" #lastname="ngModel" title="lastName" name="lastName" required minlength="3" maxlength="32" [(ngModel)]="lastName">
+            <label for="lastname">Last Name</label>
+            <div *ngIf="lastname.invalid && lastname.dirty" class="error">
+                Please Enter a Valid LastName with at Least 3 Character
+            </div>
+        </div>
+        <div class="user-box">
+            <input type="email" #email1="ngModel" title="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="email">
+            <label for="email">Email</label>
+            <div *ngIf="email1.invalid && email1.dirty" class="error">
+                Email must be in this format 'characters@characters.domain'
+            </div>
+        </div>
+        <div class="user-box">
+            <input type="password" title="password" name="password" required [(ngModel)]="password">
+            <label for="password">Password</label>
+        </div>
+        <br>
+      <input type="submit" value="Sign In" class="butt" [disabled]="form.invalid" (click)="signIn()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+</form>

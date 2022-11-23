@@ -15,6 +15,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { CheckoutOrderComponent } from './checkout-order/checkout-order.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     ConfirmationComponent,
     CheckoutOrderComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

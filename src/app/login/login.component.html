@@ -2,8 +2,8 @@
     <h1>Login</h1>
     <form>
       <div class="user-box">
-        <input type="text" title="username" name="username" required="" [(ngModel)]="userName">
-        <label>Username</label>
+        <input type="text" title="username" name="username" required="" [(ngModel)]="email">
+        <label>Email</label>
       </div>
       <div class="user-box">
         <input type="password" title="password" name="password" required="" [(ngModel)]="password">
@@ -14,7 +14,14 @@
         <span></span>
         <span></span>
         <span></span>
-        Submit
+        Log In
+      </a>
+      <a class="secA" (click)="SignUp()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Sign Up
       </a>
     </form>
   </div>

@@ -8,14 +8,14 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  userName:string='';
+  email:string='';
   password:string='';
   constructor(private router:Router,private logInService:LoginService) { }
 
   ngOnInit(): void {
   }
   logIn(){
-    if(this.userName==='' || this.password==='')
+    if(this.email==='' || this.password==='')
     {
       alert("Please Enter Username and Password...!");
     }
@@ -24,6 +24,9 @@ export class LoginComponent implements OnInit {
       this.router.navigate(["products"]);
     }
     
+  }
+  SignUp(){
+    this.router.navigate(["register"]);
   }
 
 }

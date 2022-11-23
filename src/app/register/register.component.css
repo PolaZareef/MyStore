@@ -1,0 +1,98 @@
+
+  .login-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    padding: 40px;
+    margin-top: 50px;
+    transform: translate( -50%);
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    animation-name: box-anim;
+    animation-duration: 1s;  
+}
+  @keyframes box-anim {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 50%;
+    }
+  }
+  
+  .login-box h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+  }
+  .butt{
+    width: 100%;
+    background-color: #04b3bd;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+  }
+  .butt:hover{
+    color: black;
+    background-color: #03e9f4;
+    transition: 0.5s;
+  }
+  .butt:disabled,
+  .butt[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
+  .error{
+    color: red;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  .user-box{
+    margin-bottom: 10px;
+  }
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 15px;
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    .login-box{
+        width: 350px;
+        top: 40px;
+    }
+  }

@@ -80,6 +80,9 @@
     margin-top: 40px;
     letter-spacing: 4px
   }
+  .secA{
+    margin-left: 250px;
+  }
   
   .login-box a:hover {
     background: #04b3bd;
@@ -170,5 +173,11 @@
     .login-box{
         width: 350px;
         top: 40px;
+    }
+    .secA{
+      margin-left: 0px;
+    }
+    .login-box form a{
+      display: block;
     }
   }
