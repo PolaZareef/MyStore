@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
       }
       this.registerSer.addUser(user);
       this.registerSer.user=user;
-      console.log(this.registerSer.user);
+      alert("Registration Successful...!");
       this.router.navigate(['login']);
   }
 
