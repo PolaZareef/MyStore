@@ -1,0 +1,22 @@
+h1{
+    color: white;
+}
+label{
+    color: white;
+}
+.form{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+p{
+    color: white;
+}
+.div{
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 600px) {
+    .form{
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+}

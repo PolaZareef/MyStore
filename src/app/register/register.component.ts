@@ -27,6 +27,8 @@ export class RegisterComponent implements OnInit {
         password:this.password
       }
       this.registerSer.addUser(user);
+      this.registerSer.user=user;
+      console.log(this.registerSer.user);
       this.router.navigate(['login']);
   }
 

@@ -6,8 +6,10 @@ import { Users } from '../models/users';
 })
 export class RegisterService {
   users:Users[]=[];
+  user={} as Users;
+  constructor() { 
 
-  constructor() { }
+   }
   addUser(user:Users){
     this.users.push(user);
   }

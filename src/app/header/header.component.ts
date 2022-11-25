@@ -24,4 +24,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
+  myAcc(){
+    this.router.navigate(['profile']);
+  }
+
 }

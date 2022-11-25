@@ -1,0 +1,19 @@
+<form class="form">
+    <h1>General Info</h1>
+    <div class="div">
+        <label>First Name:</label><br>
+        <input type="text" title="firstname" name="firstname" [(ngModel)]="registerSer.user.firstName"><br>
+        <label>Last Name:</label><br>
+        <input type="text" title="lastname" name="lastname"  [(ngModel)]="registerSer.user.lastName">
+    </div>
+    <h1>My Account</h1>
+    <div class="div">
+        <label>Email:</label><br>
+        <input type="text" title="username" name="username"  [(ngModel)]="registerSer.user.email"><br>
+        <label>Password:</label><br>
+        <input type={{passwordVisibility}} title="password" name="password"  [(ngModel)]="registerSer.user.password"><br>
+        <input type="checkbox" title="checkbox" name="checkbox" (click)="showPass()">
+        <label>Show Password</label>
+    </div>
+</form> 
+  

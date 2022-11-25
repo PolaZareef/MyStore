@@ -23,3 +23,11 @@ button:hover{
     color: black;
     background-color: #03e9f4;
 }
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 20px;
+    }
+}

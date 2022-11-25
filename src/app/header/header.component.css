@@ -1,12 +1,16 @@
-.header {
-    text-align: center;
+.navbar {
     background: #04b3bd;
     color: #fff;
-    padding: 12px;
+    padding: 1px;
     position: relative;
   }
-  .fa-user{
-    margin-right: 5px;
+  .navbar-toggler{
+    background-color: white;
+  }
+  .navbar-nav{
+    margin-left: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   a {
     color: #ffffff;
@@ -14,6 +18,11 @@
     font-size: 30px;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
+  }
+  a:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    text-shadow: 2px 2px 4px #949494;
   }
   .aa,.login{
     color: #ffffff;
@@ -26,5 +35,11 @@
     cursor: pointer;
     transition: 0.5s;
     text-shadow: 2px 2px 4px #949494;
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar-nav{
+      margin-left: 0px;
+    }
+    
   }
   
