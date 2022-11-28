@@ -1,11 +1,14 @@
 <div class="product-container">
     <span class="percentage"><li class="fa fa-star"></li>{{productItem.rating}}</span>
+    <span class="percentage1">-{{productItem.discountPercentage}}%</span>
     <img src={{productItem.url}} loading="lazy" routerLink="/productDetail" title="image title" class="product-image" (click)="productDetail(productItem)" >
     <p class="P">{{productItem.name}}</p>
-    <p class="p1">${{productItem.price}}</p>
     <p class="pp">{{productItem.description}}</p>
-    <select name="products" required id="products" title="products"  class="select-input" [(ngModel)]="productItem.amount" >
-        <option *ngFor="let x of quantity" value={{x}}>{{x}}</option>
-    </select>
+    <p class="p1"><b style="color: white;font-weight:bold;padding-right:5px;">Price:</b><b style="text-decoration-line: line-through;text-decoration-color: white;text-decoration-thickness: 2px;">${{productItem.price}} </b> <b style="padding-left: 20px;">${{(productItem.price*(productItem.discountPercentage/100)).toFixed(2)}}</b></p>
+    <label for="amount"><b style="color:white;font-weight:bold;padding-right: 5px;">Amount:</b>
+        <select name="products" required id="amount" title="products"  class="select-input" [(ngModel)]="productItem.amount" >
+            <option *ngFor="let x of quantity" value={{x}}>{{x}}</option>
+        </select>
+    </label>
     <button class="btn btn-primary" (click)="AddProducttoCart(productItem)">Add to Cart</button>
 </div>

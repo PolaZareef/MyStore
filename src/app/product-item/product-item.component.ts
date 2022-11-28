@@ -24,7 +24,8 @@ export class ProductItemComponent implements OnInit {
       url:'',
       description:'',
       rating:0.0,
-      amount:1
+      amount:1,
+      discountPercentage:0
     }
   }
 

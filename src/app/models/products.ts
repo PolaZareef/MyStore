@@ -6,6 +6,7 @@ export class Products{
     description:string;
     rating:number;
     amount:number;
+    discountPercentage:number;
 
     constructor(){
         this.id=1;
@@ -15,5 +16,6 @@ export class Products{
         this.description='';
         this.rating=0.0;
         this.amount=1;
+        this.discountPercentage=0;
     }
 }

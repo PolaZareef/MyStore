@@ -11,6 +11,17 @@
     margin-left: 200px;
     font-size: small;
     position: absolute;
+    font-weight: bold;
+}
+.percentage1{
+  background-color: #03e9f4;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 3px;
+  margin-right: 200px;
+  font-size: small;
+  position: absolute;
+  font-weight: bold;
 }
   .product-image:hover{
     cursor: pointer;
@@ -31,7 +42,7 @@
     background-color: rgba(0, 0, 0,0.6);
   }
   .select-input {
-    width: 108px; 
+    width: 80px; 
     margin-bottom: 8px;
     height: 80%;
   }
