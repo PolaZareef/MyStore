@@ -25,7 +25,8 @@ export class ProductItemComponent implements OnInit {
       description:'',
       rating:0.0,
       amount:1,
-      discountPercentage:0
+      discountPercentage:0,
+      inStock:0
     }
   }
 

@@ -23,6 +23,12 @@
   position: absolute;
   font-weight: bold;
 }
+.stock{
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  padding-left: 180px;
+}
   .product-image:hover{
     cursor: pointer;
     transition: 1s;
