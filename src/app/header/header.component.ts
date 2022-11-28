@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { CartServiceService } from '../services/cart-service.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +10,8 @@ import { LoginService } from '../services/login.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router:Router,public LogInService:LoginService) { }
-
+  constructor(private router:Router,public LogInService:LoginService,public cartService:CartServiceService) { }
+  TotalNumberOfOrders:number=0;
   ngOnInit(): void {
   }
 
@@ -26,6 +27,9 @@ export class HeaderComponent implements OnInit {
 
   myAcc(){
     this.router.navigate(['profile']);
+  }
+  signUp(){
+    this.router.navigate(['register']);
   }
 
 }

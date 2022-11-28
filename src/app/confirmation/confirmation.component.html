@@ -1,22 +1,35 @@
 <form #form="ngForm" (ngSubmit)="onSubmit()" class="form">
-    <label for="name">Full name</label><br>
+    <label for="name">Cardholder's Name</label><br>
     <input type="text" #fullname="ngModel" name="name" required minlength="3" maxlength="32" placeholder="minimum 3 charater..." [(ngModel)]="name">
     <br>
     <div *ngIf="fullname.invalid && fullname.dirty" class="error">
         Please Enter a Valid Name with at Least 3 Character
     </div><br>
     <label for="address">Address</label><br>
-    <input type="text" #fulladdress="ngModel" name="address" required minlength="6" placeholder="minimum 6 character..." [(ngModel)]="address">
+    <input type="text" #fulladdress="ngModel" name="address" required minlength="6" placeholder="minimum 6 character..." [(ngModel)]="address"  onkeypress="return /[0-9a-zA-Z]/i.test(event.key)">
     <br>
     <div *ngIf="fulladdress.invalid && fulladdress.dirty" class="error">
         Please Enter a Valid address with at Least 6 Character
     </div><br>
-    <label for="credit">Credit Card Number</label><br>
+    <label for="credit">Card Number</label><br>
     <input type="number" #fullcardnumber="ngModel" name="cardNumber" required  pattern='.{16}' maxlength="16" placeholder="minimum 16 digit..." [(ngModel)]="cardNumber" onKeyPress="if(this.value.length==16) return false;">
     <br>
     <div *ngIf="fullcardnumber.invalid && fullcardnumber.dirty" class="error">
         Please Enter a Valid Card Number with only 16 Digit 
     </div><br>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="date">EXP DATE</label><br>
+            <input type="date" #expdate="ngModel" title="date" name="date" required  [(ngModel)]="ExpDate">
+        </div>
+        <div class="col-sm-6">
+            <label for="cvv">CVV</label><br>
+            <input type="number" #cvv="ngModel" name="cvv" required  pattern='.{3}' maxlength="3" placeholder="only 3 digit..." [(ngModel)]="Cvv" onKeyPress="if(this.value.length==3) return false;"><br>
+            <div *ngIf="cvv.invalid && cvv.dirty" class="error">
+                Please only 3 Digits 
+            </div><br>
+        </div>
+    </div>
     <p>we will never share your payment details with anyone else</p>
-    <input type="submit"  [disabled]="form.invalid" value="submit" class="btn btn-primary" >
+    <input type="PURCHASE"  [disabled]="form.invalid" value="PURCHASE" title="btn" class="btn btn-primary" >
 </form>

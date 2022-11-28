@@ -9,15 +9,18 @@
             <a *ngIf="LogInService.isLogin" class="aa" (click)="goToStore()"><i class="fa fa-home"></i> Product List</a> 
         </li>
         <li class="nav-item pr-3">
+          <span class="spann" *ngIf="LogInService.isLogin">{{cartService.totalOrdersNumber}}</span>
             <a *ngIf="LogInService.isLogin" class="aa" (click)="goToCart()"><i class='fa fa-shopping-cart'></i> Cart</a>
         </li>
         <li class="nav-item pr-3">
             <a *ngIf="LogInService.isLogin" class="aa" (click)="myAcc()"><i class="fa fa-user"></i> Profile</a>
         </li>   
         <li class="nav-item ">
-            <a class="login" *ngIf="!LogInService.isLogin" (click)="logIn()"><i class="fa fa-user"></i>Log In</a>
+            <a class="login" *ngIf="!LogInService.isLogin" (click)="logIn()"><i class="fa fa-sign-in"></i>Log In</a>
         </li>  
-           
+        <li class="nav-item ">
+          <a class="login" *ngIf="!LogInService.isLogin" (click)="signUp()"><i class="fa fa-user"></i>Sign Up</a>
+        </li>  
       </ul>
     </div>  
   </nav>

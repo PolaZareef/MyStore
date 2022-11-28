@@ -6,6 +6,7 @@ import { Products } from '../models/products';
 })
 export class CartServiceService {
   cartProducts:Products[]=[];
+  totalOrdersNumber:number=0;
   constructor() {  }
 
   CartProducts(product:Products){
@@ -26,6 +27,7 @@ export class CartServiceService {
       }
     }
     this.cartProducts.push(product);
+    this.totalOrdersNumber+=1;
     alert("Product Added to Cart...");
   }
 }

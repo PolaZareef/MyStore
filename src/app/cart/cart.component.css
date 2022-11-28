@@ -6,6 +6,7 @@
   .fircol{
     margin-top: 50px;
   }
+  
   .h1{
     font-size: 30px;
     color: white;
@@ -46,13 +47,26 @@
       width: 100%;
     }
   }
+
+  .btn{
+    margin-top: 10px;
+    background-color: #04b3bd;
+    font-weight: bold;
+  }
+  .btn:hover{
+    color: black;
+    background-color: #03e9f4;
+  }
   @media only screen and (max-width: 600px) {
     .fircol{
       margin-left: 120px;
       margin-bottom: 40px;
     } 
+    .btn{
+      margin-left: 20px;
+    }
     .h1{
-      font-size: 40px;
+      font-size: 30px;
       color: white;
       margin-left: 15px;
     }
@@ -76,6 +90,9 @@
     .fircol{
       max-width: 100%;
       margin-left: 100px;
+    }
+    .btn{
+      margin-left: 20px;
     }
 }
   

@@ -23,6 +23,7 @@ export class ProductItemComponent implements OnInit {
       price:0,
       url:'',
       description:'',
+      rating:0.0,
       amount:1
     }
   }

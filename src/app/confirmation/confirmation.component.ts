@@ -10,6 +10,8 @@ export class ConfirmationComponent implements OnInit {
   name:string='';
   address:string='';
   cardNumber:number | string='';
+  ExpDate:number| string='';
+  Cvv:number|string='';
 
   @Output() checkOrderSuccess: EventEmitter<string> = new EventEmitter();
 

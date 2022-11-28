@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   shoppingCartProducts:Products[]=[];
   total:number=0;
   fullname:string='';
-  quantity:number[]=[0,1,2,3,4,5,6,7,8,9,10];
+  quantity:number[]=[1,2,3,4,5,6,7,8,9,10];
   productIndex:number=0
 
   constructor(private shoppingcartService:CartServiceService,private checkOrderSer:ChechOrderService, private router:Router) { }
@@ -23,10 +23,14 @@ export class CartComponent implements OnInit {
     this.calculateTotalPrice();    
   }
   onChange(product:Products){
+      this.calculateTotalPrice();
+    }
+    remove(product:Products){
       for(let i=0;i<this.shoppingCartProducts.length;i++)
       {
-        if(this.shoppingCartProducts[i].id===product.id && this.shoppingCartProducts[i].amount===0)
+        if(this.shoppingCartProducts[i].id===product.id )
         {
+          this.shoppingcartService.totalOrdersNumber-=1;
           this.productIndex=this.shoppingCartProducts.findIndex(p=>p.id===this.shoppingCartProducts[i].id);
           alert("the "+this.shoppingCartProducts[i].name+" Item will be Removed from Cart List!");
           this.shoppingCartProducts.splice(this.productIndex,1);
