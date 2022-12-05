@@ -28,7 +28,12 @@ export class RegisterComponent implements OnInit {
         email:this.email,
         password:this.password
       }
-      this.http.post('https://mystore-fea05-default-rtdb.firebaseio.com/users.json',user);
+      this.http.post('https://mystore-fea05-default-rtdb.firebaseio.com/users.json',user)
+      .subscribe(Response=>{
+        console.log(Response);
+      });
+      this.registerSer.addUser(user);
+      this.registerSer.user=user;
       alert("Registration Successful...!");
       this.router.navigate(['login']);
   }
