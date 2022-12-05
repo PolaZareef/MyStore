@@ -1,5 +1,6 @@
 import { Component, OnInit,Output,EventEmitter,Input } from '@angular/core';
 import { ChechOrderService } from '../services/check-order.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-confirmation',
@@ -19,6 +20,7 @@ export class ConfirmationComponent implements OnInit {
   constructor( public checkOrder:ChechOrderService) { }
 
   ngOnInit(): void {
+    Aos.init();
   }
   onSubmit(){
     this.checkOrderSuccess.emit(this.name);

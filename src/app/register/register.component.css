@@ -6,6 +6,7 @@
     width: 600px;
     padding: 40px;
     margin-top: 50px;
+    margin-bottom: 50px;
     transform: translate( -50%);
     background: rgba(0, 0, 0, 0.8);
     box-sizing: border-box;
@@ -37,6 +38,7 @@
     color: white;
     font-weight: bold;
     height: 40px;
+    margin-bottom: 10px;
   }
   .butt:hover{
     color: black;
@@ -80,6 +82,9 @@
     pointer-events: none;
     transition: .5s;
   }
+  .link{
+    margin-left: 30%;
+  }
   
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {
@@ -94,5 +99,8 @@
     .login-box{
         width: 350px;
         top: 40px;
+    }
+    .link{
+      margin-left: 15%;
     }
   }

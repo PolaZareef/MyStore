@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChechOrderService } from '../services/check-order.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-checkout-order',
@@ -15,6 +16,7 @@ export class CheckoutOrderComponent implements OnInit {
   ngOnInit(): void {
     this.name=this.checkOrder.fullname;
     this.totalprice=this.checkOrder.totalPrice;
+    Aos.init();
   }
   goToProducts()
   {

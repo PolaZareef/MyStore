@@ -3,7 +3,6 @@ import { CartServiceService } from '../services/cart-service.service';
 import { Products } from '../models/products';
 import { ChechOrderService } from '../services/check-order.service';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -20,7 +19,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.shoppingCartProducts=this.shoppingcartService.cartProducts;
-    this.calculateTotalPrice();    
+    this.calculateTotalPrice(); 
   }
   onChange(product:Products){
       this.calculateTotalPrice();

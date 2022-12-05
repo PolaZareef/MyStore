@@ -1,4 +1,6 @@
-<form #form="ngForm" (ngSubmit)="onSubmit()" class="form">
+<form #form="ngForm" (ngSubmit)="onSubmit()" class="form" data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="1000">
     <label for="name">Cardholder's Name</label><br>
     <input type="text" #fullname="ngModel" name="name" required minlength="3" maxlength="32" placeholder="minimum 3 charater..." [(ngModel)]="name">
     <br>

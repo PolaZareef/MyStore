@@ -4,6 +4,7 @@ import { ProductsService } from '../services/products.service';
 import { ProductDetailService } from '../services/product-detail.service';
 import { CartServiceService } from '../services/cart-service.service';
 import { LoginService } from '../services/login.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-product-item',
@@ -31,6 +32,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    Aos.init();
   }
 
   productDetail(product:Products){
