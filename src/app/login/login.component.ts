@@ -18,9 +18,18 @@ export class LoginComponent implements OnInit {
   constructor(private router:Router,private logInService:LoginService,private registerSer:RegisterService,private http: HttpClient) { }
   //this functions with firebase api
   ngOnInit(): void {
-    this.http.get('https://mystore-fea05-default-rtdb.firebaseio.com/users.json')
+    //using Firebase
+    /*this.http.get('https://mystore-fea05-default-rtdb.firebaseio.com/users.json')
     .subscribe(res=>{
       this.users1=res;
+    });*/
+    //using nodejs backend api
+    //https://users-api-production-e5aa.up.railway.app/users  lw publish api
+    this.http.get('https://users-api-production-e5aa.up.railway.app/users')
+    .subscribe(res=>{
+      console.log(res);
+      this.users1=res;
+      console.log(this.users1);
     });
   }
   logIn(){

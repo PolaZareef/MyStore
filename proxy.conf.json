@@ -1,0 +1,10 @@
+{
+    "/api": {
+        "target": "https://users-api-production-e5aa.up.railway.app/users",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+    }
+
+    //"target": "localhost:3000/users",

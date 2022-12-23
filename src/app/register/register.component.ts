@@ -22,15 +22,22 @@ export class RegisterComponent implements OnInit {
   //function with firebase api
   signIn(){
       let user={
-        id:Math.random(),
-        firstName:this.firstName,
-        lastName:this.lastName,
+        //id:Math.random(),
+        firstname:this.firstName,
+        lastname:this.lastName,
         email:this.email,
         password:this.password
       }
-      this.http.post('https://mystore-fea05-default-rtdb.firebaseio.com/users.json',user)
+      //using firebase
+      /*this.http.post('https://mystore-fea05-default-rtdb.firebaseio.com/users.json',user)
       .subscribe(Response=>{
         console.log(Response);
+      });*/
+      //using nodejs backend api
+      //https://users-api-production-e5aa.up.railway.app/users  lw publish api
+      this.http.post('https://users-api-production-e5aa.up.railway.app/users',user)
+      .subscribe(Response=>{
+        //console.log(Response);
       });
       this.registerSer.addUser(user);
       this.registerSer.user=user;
