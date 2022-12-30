@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
       //using nodejs backend api
       for(let i=0;i<this.users1.length;i++)
       {
-        if(this.email===this.users1[i].email)
+        if(this.email.toLocaleLowerCase()===this.users1[i].email.toLocaleLowerCase())
         {
           alert("this User Already Exist");
           return;

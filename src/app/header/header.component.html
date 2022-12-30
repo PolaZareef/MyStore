@@ -14,13 +14,13 @@
         </li>
         <li class="nav-item pr-3">
             <a *ngIf="LogInService.isLogin" class="aa" (click)="myAcc()"><i class="fa fa-user"></i> Profile</a>
-        </li>   
+        </li>  
         <li class="nav-item ">
             <a class="login" *ngIf="!LogInService.isLogin" (click)="logIn()"><i class="fa fa-sign-in"></i>Log In</a>
         </li>  
         <li class="nav-item ">
           <a class="login" *ngIf="!LogInService.isLogin" (click)="signUp()"><i class="fa fa-user"></i>Sign Up</a>
-        </li>  
+        </li> 
       </ul>
     </div>  
   </nav>
