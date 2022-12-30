@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     });*/
     //using nodejs backend api
     //https://users-api-production-e5aa.up.railway.app/users  lw publish api
+    
     this.http.get('https://users-api-production-e5aa.up.railway.app/users')
     .subscribe(res=>{
       console.log(res);

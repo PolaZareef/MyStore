@@ -14,10 +14,16 @@ export class RegisterComponent implements OnInit {
   email:string='';
   password:string='';
   users:Users[]=[];
+  users1:any;
 
   constructor(private router:Router,private registerSer:RegisterService,private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('https://users-api-production-e5aa.up.railway.app/users')
+    .subscribe(res=>{
+      this.users1=res;
+      console.log(this.users1);
+    });
   }
   //function with firebase api
   signIn(){
@@ -28,21 +34,31 @@ export class RegisterComponent implements OnInit {
         email:this.email,
         password:this.password
       }
+      //using nodejs backend api
+      for(let i=0;i<this.users1.length;i++)
+      {
+        if(this.email===this.users1[i].email)
+        {
+          alert("this User Already Exist");
+          return;
+        }
+      }
+          this.http.post('https://users-api-production-e5aa.up.railway.app/users',user)
+          .subscribe(Response=>{
+              //console.log(Response);
+          });
+          this.registerSer.addUser(user);
+          this.registerSer.user=user;
+          alert("Registration Successful...!");
+          this.router.navigate(['login']);
+        
+      
+
       //using firebase
       /*this.http.post('https://mystore-fea05-default-rtdb.firebaseio.com/users.json',user)
       .subscribe(Response=>{
         console.log(Response);
       });*/
-      //using nodejs backend api
-      //https://users-api-production-e5aa.up.railway.app/users  lw publish api
-      this.http.post('https://users-api-production-e5aa.up.railway.app/users',user)
-      .subscribe(Response=>{
-        //console.log(Response);
-      });
-      this.registerSer.addUser(user);
-      this.registerSer.user=user;
-      alert("Registration Successful...!");
-      this.router.navigate(['login']);
   }
   //function without firebase api
   /*signIn(){
