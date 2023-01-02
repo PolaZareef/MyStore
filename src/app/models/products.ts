@@ -2,6 +2,7 @@ export class Products{
     id:number;
     name:string;
     price:number;
+    category:string;
     url:string;
     description:string;
     rating:number;
@@ -13,6 +14,7 @@ export class Products{
         this.id=1;
         this.name='';
         this.price=0;
+        this.category='';
         this.url='';
         this.description='';
         this.rating=0.0;

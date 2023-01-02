@@ -2,6 +2,8 @@
     list-style-type: none;
     width: 260px;
     border-radius: 5px;
+    height: 365px;
+    object-fit: cover;
   } 
   .percentage{
     background-color: gold;
@@ -35,7 +37,7 @@
   }
   
   .product-container {
-    width: 260px;
+    max-width: 260px;
     border-radius: 5px;
     margin: auto;
     margin-top: 64px;

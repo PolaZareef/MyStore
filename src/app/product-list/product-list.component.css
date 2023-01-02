@@ -14,9 +14,36 @@
       transform: scale(1, 1);
     }
   }*/
+  .category{
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+  }
+  .category select{
+    width: 200px;
+    margin-left: 10px;
+  }
+  .category label{
+    font-weight: bolder;
+    font-size: 25px;
+  }
+  select:required:invalid {
+    color: gray;
+  }
+  option {
+    color: black;
+  }
   @media only screen and (max-width: 600px) {
     .product-container{
       padding-left: 35px;
       max-width: 100%;
+    }
+    .category label{
+      font-weight: bolder;
+      font-size: 25px;
+    }
+    .category select{
+      width: 150px;
+      margin-left: 10px;
     }
   }

@@ -1,5 +1,18 @@
 <div class="row product-container" >
+    <div class="category">
+        <label>Categories:</label>
+        <select name="category" required title="category" [(ngModel)]="Category" (change)="FilterData()">
+            <option value="" disabled selected hidden>Choose Category...</option>
+            <option value="all">All</option>
+            <option value="Clothes">Clothes</option>
+            <option value="Devices">Devices</option>
+            <option value="Others">Others</option>
+        </select>
+    </div>
     <div class="col-sm-4 " *ngFor="let product of products" >
-        <app-product-item [productItem]="product" ></app-product-item>
+        <app-product-item [productItem]="product" *ngIf="!selectedCategory"></app-product-item>
+    </div>
+    <div class="col-sm-4 " *ngFor="let product of products2" >
+        <app-product-item [productItem]="product" *ngIf="selectedCategory"></app-product-item>
     </div>
 </div>
