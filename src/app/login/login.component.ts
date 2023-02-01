@@ -25,13 +25,11 @@ export class LoginComponent implements OnInit {
     });*/
     //using nodejs backend api
     //https://users-api-production-e5aa.up.railway.app/users  lw publish api
-    
-    this.http.get('https://users-api-production-e5aa.up.railway.app/users')
-    .subscribe(res=>{
+    this.logInService.getUsers().subscribe(res=>{
       console.log(res);
       this.users1=res;
       console.log(this.users1);
-    });
+    })
   }
   logIn(){
     this.users=Object.values(this.users1);

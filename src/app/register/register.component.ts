@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { Users } from '../models/users';
 import { RegisterService } from '../services/register.service';
 import { HttpClient } from '@angular/common/http';
+import { LoginService } from '../services/login.service';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -16,16 +18,14 @@ export class RegisterComponent implements OnInit {
   users:Users[]=[];
   users1:any;
 
-  constructor(private router:Router,private registerSer:RegisterService,private http: HttpClient) { }
+  constructor(private router:Router,private loginSer:LoginService,private registerSer:RegisterService,private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('https://users-api-production-e5aa.up.railway.app/users')
-    .subscribe(res=>{
+    this.loginSer.getUsers().subscribe(res=>{
       this.users1=res;
       console.log(this.users1);
     });
   }
-  //function with firebase api
   signIn(){
       let user={
         //id:Math.random(),
@@ -43,17 +43,14 @@ export class RegisterComponent implements OnInit {
           return;
         }
       }
-          this.http.post('https://users-api-production-e5aa.up.railway.app/users',user)
-          .subscribe(Response=>{
+          this.registerSer.postUser(user).subscribe(res=>{
               //console.log(Response);
-          });
-          this.registerSer.addUser(user);
-          this.registerSer.user=user;
-          alert("Registration Successful...!");
-          this.router.navigate(['login']);
-        
-      
-
+              this.registerSer.addUser(user);
+              this.registerSer.user=user;
+              alert("Registration Successful...!");
+              this.router.navigate(['login']);
+          })
+         
       //using firebase
       /*this.http.post('https://mystore-fea05-default-rtdb.firebaseio.com/users.json',user)
       .subscribe(Response=>{
